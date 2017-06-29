@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>列偏移</title>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .container{ background-color:#ff0000; color:#fff; }
+        .container-fluid{ background:#ffff00;}
+        .container-fluid .row .one{ border-right:1px solid #f00; }
+        .row{ border-bottom:1px solid #fff;}
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class=" col-md-5 one">我是左边占有五个栅格的列</div>
+        <div class=" col-md-5 col-md-offset-2 one">我是右边占有五个栅格的列，但是我在中等屏幕上设置了列偏移两个栅格</div>  <!--其实就是在bootstrap源码中设置了 margin-left为两个栅格的宽度-->
+    </div>
+</div>
+</body>
+</html>
