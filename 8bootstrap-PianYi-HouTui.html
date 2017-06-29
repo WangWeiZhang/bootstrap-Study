@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>偏移-后退-前拉</title>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .container{ background-color:#ff0000; color:#fff; }
+        .container-fluid{ background:#ffff00;}
+        .one{ border-right:1px solid #fff; }
+        .row{ border-bottom:1px solid #fff;}
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <!-- 偏移 ：  偏移 在bootstrap中的概念 指的就是在十二栅格 中进行偏移 比如 在 大于1200像素的时候 两列布局 第二个偏移 2个栅格 那么 这两个列 中间 则会 留出两个栅格的空隙。
+            在这个demo中 分别在 在小屏幕上 第一行 向后偏移了 两个栅格
+                             在 中等屏幕的 第二行 向后偏移了 两个栅格
+                             所以 在这两个 尺寸的屏幕之间来回切换 就能看见其实 类似于 向前拉 和 向后推
+
+    -->
+    <div class="row">
+        <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+        <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0</div>
+
+        <!--
+            设置了 两个 屏幕区间的 预定义类
+            md 中等范围 》=992屏幕的 范围内 都是 分别 为 6 个栅格
+            sm 小屏幕 768》= xxxxx 《=992 的范围内  两个列div 分别占有 5个栅格 其中后面的div 列 设置了offset 偏移了两个栅格
+        -->
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+        <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-0">.col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0</div>
+
+        <!--
+            在lg大屏幕上 都是 各占有 六分 平分了十二栅格化布局
+            在md中等屏幕上 》=992px  分别占有 两个列 分别占有 5个格  其中 第二列 设置了 col-md-offset-2 偏移了 两个格子  两个列的 中间 部分就是空的  类似于间距
+        -->
+    </div>
+</div>
+</body>
+</html>
